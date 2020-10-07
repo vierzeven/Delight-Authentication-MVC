@@ -29,6 +29,7 @@ class AuthController
         } catch (DuplicateUsernameException $e) {
             die('Username already exists');
         }
+        header("Location: " . WWW_ROOT . "/index.php");
     }
 
 }

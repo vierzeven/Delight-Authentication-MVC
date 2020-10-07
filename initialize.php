@@ -7,6 +7,14 @@ session_start();
 define("PROJECT_PATH", dirname(__FILE__));
 require_once PROJECT_PATH . '/vendor/autoload.php';
 
+// Define web paths
+if ($_SERVER['SERVER_NAME'] === 'localhost') {
+    define("WWW_ROOT", 'http://localhost/public');
+} else {
+    // TODO: Replace URL before going into production
+    define("WWW_ROOT", 'https://example.com');
+}
+
 define("DBNAME", "delight-authentication-mvc");
 // TODO: Replace username and password before going into production
 define("DBUSER", "root");
