@@ -1,0 +1,6 @@
+{
+    "require": {
+        "delight-im/auth": "^8.2",
+        "smarty/smarty": "~3.1"
+    }
+}
