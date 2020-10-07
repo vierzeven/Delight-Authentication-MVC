@@ -4,6 +4,7 @@ use Delight\Auth\InvalidEmailException;
 use Delight\Auth\InvalidPasswordException;
 use Delight\Auth\TooManyRequestsException;
 use Delight\Auth\UserAlreadyExistsException;
+use Delight\Auth\DuplicateUsernameException;
 
 class AuthController
 {
