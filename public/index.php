@@ -15,6 +15,7 @@ switch ($route) {
     // Processing
     case 'processregistration':
         $authController->processregistration($auth);
+        $homeController->home($smarty);
         break;
     // Page not found
     default:

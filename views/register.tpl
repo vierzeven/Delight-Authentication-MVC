@@ -1,5 +1,7 @@
 {* Smarty *}
 
+{include file="header.tpl" title="Delight-Authentication-MVC"}
+
 <form action="?route=processregistration" method="post">
     <label for="email">
         <input type="email" id="email" name="email" placeholder="Email">
@@ -12,3 +14,6 @@
     </label>
     <button type="submit">Register</button>
 </form>
+
+{include file="footer.tpl"}
+

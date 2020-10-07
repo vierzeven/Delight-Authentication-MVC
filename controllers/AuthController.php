@@ -14,9 +14,9 @@ class AuthController
             $username = $_POST['username'];
             if (preg_match('/[\x00-\x1f\x7f\/:\\\\]/', $username) === 0) {
                 $userId = $auth->registerWithUniqueUsername($_POST['email'], $_POST['password'], $username, function ($selector, $token) {
-                    echo 'Send ' . $selector . ' and ' . $token . ' to the user (e.g. via email)';
+                    $url = 'https://www.example.com/verify_email?selector=' . urlencode($selector) . '&token=' . urlencode($token);
+                    // TODO: Send URL to the user through email
                 });
-                echo 'We have signed up a new user with the ID ' . $userId;
             }
         } catch (InvalidEmailException $e) {
             die('Invalid email address');
